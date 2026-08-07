@@ -12,6 +12,23 @@ sudo apt update
 echo "🛠️ Instalando herramientas..."
 sudo apt install -y fish curl lolcat git gh nano micro
 
+echo "📝 Configurando Visual Studio Code..."
+
+if command -v code >/dev/null 2>&1; then
+    echo "✅ Comando code ya disponible"
+else
+    CODE_PATH=$(find /mnt/c/Users \
+        -path "*/Microsoft VS Code/bin/code" \
+        2>/dev/null | head -n 1)
+    if [ -n "$CODE_PATH" ]; then
+        sudo ln -sf "$CODE_PATH" /usr/local/bin/code
+        echo "✅ Comando code configurado"
+    else
+        echo "⚠️ No se encontró Visual Studio Code en Windows"
+        echo "Instala VS Code y la extensión WSL"
+    fi
+fi
+
 echo "🔗 Creando enlace simbólico de Fish..."
 
 mkdir -p ~/.config
