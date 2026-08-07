@@ -53,6 +53,16 @@ else
     echo "✅ Fisher ya está instalado"
 fi
 
+echo "🌊 Configurando Tide..."
+
+fish -c "
+if type -q tide
+    tide configure
+else
+    echo '⚠️ Tide no está instalado'
+fi
+"
+
 echo "🧩 Instalando plugins Fish..."
 fish -c "fisher update"
 
