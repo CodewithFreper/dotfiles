@@ -1,6 +1,3 @@
-# Fish variables
-fish/fish_variables
-
 # Fisher
 fish/functions/fisher.fish
 fish/completions/fisher.fish
