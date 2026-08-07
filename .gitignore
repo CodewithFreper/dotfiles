@@ -1,0 +1,17 @@
+# Fish variables
+fish/fish_variables
+
+# Fisher
+fish/functions/fisher.fish
+fish/completions/fisher.fish
+
+# Tide
+fish/functions/tide*
+fish/functions/_tide*
+fish/functions/fish_prompt.fish
+fish/functions/fish_mode_prompt.fish
+fish/conf.d/_tide_init.fish
+fish/completions/tide.fish
+
+# SSH
+.ssh/
